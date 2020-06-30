@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <title>Armario</title>
+        <script src="lib/x3dom-full.js"></script>
+        <link rel="stylesheet" href="lib/x3dom.css">
+        <style type = "text/css">
+        h1{
+			color: #191970;
+			font-size: 15px;
+			font-family: "Times New Roman", Times, serif;
+			text-align: right;
+		}
+
+		h2 {
+			color: #191970;
+			font-size: 20px;
+			font-family: "Times New Roman", Gadget, sans-serif;
+			text-align: center;
+		}
+
+		h3 {
+			color: #191970;
+			font-size: 20px;
+			font-family: "Times New Roman", Geneva, sans-serif;
+			text-align: center;
+		}
+
+		table{
+			width: 100%;
+		}
+
+		th{
+			padding: 15px;
+    		background-color:#4A71D4;
+		}
+
+		td{
+			padding: 15px;
+    		text-align: center;
+		}
+
+		th, td {
+			border: 1px solid black;
+		}
+
+    	</style>
+
+    </head>
+
+    <body>
+    	<h1> Ano Lectivo: 2018/2019 </h1>
+    	<h2> Engenharia Informática: Computação Gráfica </h2>
+    	<h3> Miguel Santos	nº38128 </h3>
+    	
+    	<table>
+
+        	<tr>
+            	<th> Original</th>
+                <th> Resolvido </th>
+            </tr>
+
+            <tr>
+                <td> 
+                <img src="media/armario.jpg" width="450px" height="450px"></img>
+                </td>
+
+                <td>
+                      
+                	 <x3d width="750px" height="550px">
+                	 <scene>
+                        <timesensor id = "time" cycleInterval="3.0" loop= "true">
+                        </timesensor>
+
+                	 	<switch whitchChoice = "-1">
+                	 		<box id = "fora"
+                	 			size = "1 1 1">
+
+                            <sphere id = "esfera"
+                                radius = 1 >
+                	 	</switch>
+                        
+                    
+                	 	
+                        <Transform id = "cima" >
+                	 		<Transform = translation = "0 5 0" scale = "2 0.1 12" rotation ="0 1 0 1.57 " >
+                	 			<shape>
+                	 			   <appearance>
+                	 				  <twosidedmaterial diffuseColor="#393430">                                        
+                	 			   </appearance>
+                	 			   <X3DGeometryNode use = "fora">
+                	 			   </X3DGeometryNode>
+                	 			</shape>
+                	 		</Transform>
+                	 	</Transform>
+                	 	
+                 	 	<Transform id = "baixo" >
+                	 		<Transform = translation = "0 -5 0" scale = "2 0.1 12" rotation ="0 1 0 1.57" >
+                	 			<shape>
+                	 			   <appearance>
+                	 				  <twosidedmaterial diffuseColor="#393430">
+                	 			   </appearance>
+              	 	               <X3DGeometryNode use = "fora">
+                	 			   </X3DGeometryNode>
+                	 			</shape>
+                	 		</Transform>
+                	 	</Transform>
+ 
+                	 	<Transform id = "esquerdo" >
+                	 		<Transform = translation = "-6 0 0" scale = "10 0.1 2" rotation ="0 0 1 1.57" >
+                	 			<shape>
+                	 				<appearance>
+                	 					<twosidedmaterial diffuseColor="#393430">
+                	 				</appearance>
+                	 			   <X3DGeometryNode use = "fora">
+                	 			   </X3DGeometryNode>
+                	 			</shape>
+                	 		</Transform>
+                	 	</Transform>
+                        
+                        <Transform id = "direito" >
+                            <Transform = translation = "6 0 0" scale = "10 0.1 2" rotation ="0 0 1 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                        <Transform id = "meio" >
+                            <Transform = translation = "0 0 0" scale = "10 0.1 2" rotation ="0 0 1 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                         <Transform id = "prateleiras baixo" >
+                            <Transform = translation = "0 -4.5 0" scale = "1.8 0.1 12" rotation ="0 1 0 1.57 " >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+                        
+                        <Transform id = "prateleiras meio baixo" >
+                            <Transform = translation = "0 -2.25 0" scale = "1.8 0.1 12" rotation ="0 1 0 1.57 " >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+
+                         <Transform id = "prateleiras meio cima" >
+                            <Transform = translation = "0 0.5 0" scale = "1.8 0.1 12" rotation ="0 1 0 1.57 " >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                        <Transform id = "prateleiras  cima" >
+                            <Transform = translation = "0 2.75 0" scale = "1.8 0.1 12" rotation ="0 1 0 1.57 " >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                        <Transform id = "preencher baixo" >
+                            <Transform = translation = "0 -4.75 0" scale = "2 0.5 12" rotation ="0 1 0 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+                        
+                       <Transform id = "preencher tras" >
+                            <Transform = translation = "3 0 -0.88" scale = "6 0.25 10" rotation ="1 0 0 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                        <Transform id = "mini tras baixo" >
+                            <Transform = translation = "0 -4.25 -0.95" scale = "0.1 0.5 12" rotation ="0 1 0 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="v#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                           <Transform id = "mini tras semi-baixo" >
+                            <Transform = translation = "0 -2.05 -0.95" scale = "0.1 0.5 12" rotation ="0 1 0 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                        <Transform id = "mini tras semi-baixo" >
+                            <Transform = translation = "0 0.7 -0.95" scale = "0.1 0.5 12" rotation ="0 1 0 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                 </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform> 
+                        
+                        <Transform id = "mini tras semi-cima" >
+                            <Transform = translation = "0 2.95 -0.95" scale = "0.1 0.5 12" rotation ="0 1 0 1.57" >
+                                <shape>
+                                    <appearance>
+                                        <twosidedmaterial diffuseColor="#393430">
+                                    </appearance>
+                                    <X3DGeometryNode use = "fora">
+                                    </X3DGeometryNode>
+                                </shape>
+                            </Transform>
+                        </Transform>
+
+                        <Transform id= "porta esquerda" center = "0 0 1">
+                            <Transform id = "porta esquerda cima" >
+                                <Transform = translation = "1.5 4.7 1" scale = "0.1 0.5 3" rotation ="0 1 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "porta esquerda baixo" >
+                                <Transform = translation = "1.5 -4.25 1" scale = "0.1 0.5 3" rotation ="0 1 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                        </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "porta esquerda esquerda" >
+                                <Transform = translation = "0.25 0 1" scale = "0.5 0.1 9" rotation ="1 0 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "porta esquerda direita" >
+                                <Transform = translation = "2.75 0 1" scale = "0.5 0.1 9" rotation ="1 0 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "porta esquerda dentro" >
+                                <Transform = translation = "1.5 0 0.9" scale = "2 0.1 9" rotation ="1 0 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "puxador esquerdo " >
+                                <Transform = translation = "2.75 0 1.1" scale = "0.1 0.1 0.1" rotation ="1 0 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <ImageTexture  url="media/textura.jpg"><ImageTexture/>
+                                        </appearance>
+                                        <X3DGeometryNode use = "esfera">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+                        </Transform>
+
+
+                        <Transform id = "porta direita" center = "6 0 1" >
+                            <Transform id = "porta direita cima">
+                                <Transform = translation = "4.5 4.7 1" scale = "0.1 0.5 3" rotation ="0 1 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                    </Transform>
+                            </Transform>
+
+                            <Transform id = "porta direita baixo" >
+                                <Transform = translation = "4.5 -4.25 1" scale = "0.1 0.5 3" rotation ="0 1 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "porta direita direita" >
+                                <Transform = translation = "5.75 0 1" scale = "0.5 0.1 9" rotation ="1 0 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "porta direita esquerda" >
+                                <Transform = translation = "3.25 0 1" scale = "0.5 0.1 9" rotation ="1 0 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "porta direito dentro" >
+                                <Transform = translation = "4.5 0 0.9" scale = "2 0.1 9" rotation ="1 0 0 1.57 " >
+                                    <shape>
+                                        <appearance>
+                                            <twosidedmaterial diffuseColor="#393430">
+                                        </appearance>
+                                        <X3DGeometryNode use = "fora">
+                                        </X3DGeometryNode>
+                                    </shape>
+                                </Transform>
+                            </Transform>
+
+                            <Transform id = "puxador direito " >
+                                <Transform = translation = "3.25 0 1.1" scale = "0.1 0.1 0.1" rotation ="1 0 0 1.57 " >
+                                <shape>
+                                    <appearance>
+                                        <ImageTexture  url="media/textura.jpg"><ImageTexture/>
+                                    </appearance>
+                                    <X3DGeometryNode use = "esfera">
+                                    </X3DGeometryNode>
+                                </shape>
+                                </Transform>
+                            </Transform>
+                        </Transform>
+
+
+                        <OrientationInterpolator DEF="movimento pd"
+                            key="
+                            0.00
+                            0.35
+                            0.70" 
+                            keyValue="
+                            0 0 0 0.0
+                            0 1 0 1.57
+                            0 0 0 0.0">
+
+                        </OrientationInterpolator> 
+
+                        <OrientationInterpolator DEF="movimento pe"
+                            key="
+                            0.00
+                            0.35
+                            0.70" 
+                            keyValue="
+                            0 0 0 0.0
+                            0 -1 0 1.57
+                            0 0 0 0.0">
+
+                        </OrientationInterpolator>                   
+
+                        <ROUTE 
+                            fromNode="time" fromField="fraction_changed" 
+                            toNode="movimento pe" toField="set_fraction">
+                        </ROUTE>
+                        <ROUTE 
+                            fromNode="movimento pe" fromField="value_changed" 
+                            toNode="porta esquerda" toField="rotation">
+                        </ROUTE>         
+
+                        <ROUTE 
+                            fromNode="time" fromField="fraction_changed" 
+                            toNode="movimento pd" toField="set_fraction">
+                        </ROUTE>
+                        <ROUTE 
+                            fromNode="movimento pd" fromField="value_changed" 
+                            toNode="porta direita" toField="rotation">
+                        </ROUTE>  
+
+                      </scene>
+                  </x3d >             
+              </td>
+            </tr>
+
+        </table>
+    </body>
+</html>
+                	 

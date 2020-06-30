@@ -1,0 +1,4 @@
+import java.until.Random;
+class Die {
+  private static final int Max_Number = 6;
+  private static final int Min_Number = 0
